@@ -1,41 +1,51 @@
 # dashboard.omann.org
 
-Mobile-accessible project status dashboard for Otto Omann.
+Mobile-accessible project status dashboards for Otto Omann.
 
-Hosted at [dashboard.omann.org](https://dashboard.omann.org) via Cloudflare Pages.
+Two separate dashboards, deployed from this repo via Cloudflare Pages:
 
-## What it shows
+| URL | File | Pillar |
+|-----|------|--------|
+| [work.omann.org](https://work.omann.org) | `work.html` | Work (melabot) |
+| [life.omann.org](https://life.omann.org) | `life.html` | Private (ottomator) |
 
-- **Work pillar (melabot):** Notion task stats (open, in progress, overdue, blocked) + git/OV health per project
-- **Private pillar (ottomator):** Coming Phase 2
+## What each shows
+
+- **Notion task stats:** open, active, overdue, blocked/human-owned
+- **Git / OV health:** per-project status flags (Critical, Git Stale, OV Silent, Idle, OK)
+- **Needs Attention:** projects with flags worse than OK/Idle
 
 ## Data sources
 
-The dashboard is fully static — it fetches pre-generated JSON reports from GitHub:
+Fully static — fetches pre-generated JSON reports from GitHub raw URLs on every load:
 
 | Pillar | Source |
 |--------|--------|
 | Work | `https://raw.githubusercontent.com/mr-omann/melabot/main/reports/dashboard.json` |
-| Private | TBD |
+| Private | `https://raw.githubusercontent.com/mr-omann/ottomator/main/reports/dashboard.json` |
 
-JSON reports are generated weekly by the hub-sitrep LaunchAgent (`melabot/PROJECTS/hub-sitrep/scripts/collect.sh`).
+JSON reports are generated weekly by each pillar's sitrep LaunchAgent (Mondays at 09:00 / 09:15).
 
 ## Deployment
 
 Connected to Cloudflare Pages. Every push to `main` deploys automatically.
 
-**Custom domain:** `dashboard.omann.org`  
-Set DNS CNAME: `dashboard` → `<your-pages-project>.pages.dev`
+**Two custom domains on one Pages project:**
+1. Add `work.omann.org` domain → set path rewrite or root redirect to `work.html`
+2. Add `life.omann.org` domain → set path rewrite or root redirect to `life.html`
+
+DNS in Cloudflare: CNAME `work` → `<pages-project>.pages.dev`, CNAME `life` → `<pages-project>.pages.dev`
 
 ## Local preview
 
-Open `index.html` directly in a browser. Note: the JSON fetch will fail due to CORS on `file://` — use a local server:
-
 ```bash
 python3 -m http.server 8080
-# then open http://localhost:8080
+# work: http://localhost:8080/work.html
+# life: http://localhost:8080/life.html
 ```
+
+Note: JSON fetch will fail from `file://` due to CORS — use the local server.
 
 ## No build step
 
-Pure HTML/CSS/JS — no npm, no bundler. Cloudflare Pages deploys it directly.
+Pure HTML/CSS/JS — no npm, no bundler. Cloudflare Pages deploys directly from repo root.

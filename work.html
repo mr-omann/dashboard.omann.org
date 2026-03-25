@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard — omann.org</title>
+  <title>Work Dashboard — omann.org</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -229,24 +229,13 @@
       padding-top: 12px;
       border-top: 1px solid var(--border);
     }
-
-    .private-placeholder {
-      background: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 16px;
-    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Project Dashboard</h1>
-  <button id="refresh-btn" onclick="loadAll()">↻ Refresh</button>
+  <h1>Work Dashboard</h1>
+  <button id="refresh-btn" onclick="load()">↻ Refresh</button>
 </header>
 
 <div id="root"><div class="loading">Loading...</div></div>
@@ -254,24 +243,8 @@
 <div class="ts" id="render-ts"></div>
 
 <script>
-// =============================================================================
-// Data sources
-// =============================================================================
-const SOURCES = {
-  work: {
-    label: "Work",
-    url: "https://raw.githubusercontent.com/mr-omann/melabot/main/reports/dashboard.json",
-  },
-  // private pillar — will be enabled once ottomator exports dashboard.json
-  // private: {
-  //   label: "Private",
-  //   url: "https://raw.githubusercontent.com/mr-omann/ottomator/main/reports/dashboard.json",
-  // },
-};
+const SOURCE_URL = "https://raw.githubusercontent.com/mr-omann/melabot/main/reports/dashboard.json";
 
-// =============================================================================
-// Flag helpers
-// =============================================================================
 function flagDotClass(flag) {
   const m = { OK: "dot-ok", IDLE: "dot-idle", "GIT-STALE": "dot-stale", "OV-SILENT": "dot-silent", CRITICAL: "dot-critical" };
   return m[flag] || "dot-idle";
@@ -282,19 +255,13 @@ function flagLabel(flag) {
   return m[flag] || flag;
 }
 
-// =============================================================================
-// Render a single pillar
-// =============================================================================
-function renderPillar(key, data) {
+function renderPillar(data) {
   const n = data.notion_tasks || {};
   const g = data.git_health || {};
   const projects = data.projects || [];
 
   const hasOverdue  = (n.overdue  || 0) > 0;
   const hasBlocked  = (n.blocked  || 0) > 0;
-  const hasAttention = (g.need_attention || 0) > 0;
-
-  const notionStatClass = (val, badFn) => badFn(val) ? "error" : val > 0 ? "warn" : "ok";
 
   const flagCounts = g.by_flag || {};
   const attention = projects.filter(p => p.flag !== "OK" && p.flag !== "IDLE");
@@ -302,7 +269,7 @@ function renderPillar(key, data) {
   return `
     <div class="pillar">
       <div class="pillar-header">
-        <span class="pillar-title">${data.workspace || key}</span>
+        <span class="pillar-title">${data.workspace || "work"}</span>
         <span class="pillar-week">${data.week || ""}</span>
       </div>
 
@@ -354,44 +321,21 @@ function renderPillar(key, data) {
   `;
 }
 
-// =============================================================================
-// Load and render
-// =============================================================================
-async function loadAll() {
+async function load() {
   const btn = document.getElementById("refresh-btn");
   btn.classList.add("spinning");
 
   const root = document.getElementById("root");
   root.innerHTML = '<div class="loading">Loading...</div>';
 
-  const results = await Promise.allSettled(
-    Object.entries(SOURCES).map(async ([key, src]) => {
-      const res = await fetch(src.url + "?t=" + Date.now());
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      return { key, label: src.label, data };
-    })
-  );
-
-  let html = "";
-
-  for (const result of results) {
-    if (result.status === "fulfilled") {
-      const { key, data } = result.value;
-      html += renderPillar(key, data);
-    } else {
-      html += `<div class="pillar"><div class="error-box">Failed to load: ${result.reason?.message || "unknown error"}</div></div>`;
-    }
+  try {
+    const res = await fetch(SOURCE_URL + "?t=" + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    root.innerHTML = renderPillar(data);
+  } catch (e) {
+    root.innerHTML = `<div class="error-box">Failed to load: ${e.message}</div>`;
   }
-
-  // Private pillar placeholder until ottomator exports dashboard.json
-  html += `
-    <div class="private-placeholder">
-      Private pillar — coming in Phase 2 (ottomator)
-    </div>
-  `;
-
-  root.innerHTML = html || '<div class="loading">No data</div>';
 
   document.getElementById("render-ts").textContent =
     "Last refreshed: " + new Date().toLocaleString();
@@ -399,8 +343,7 @@ async function loadAll() {
   btn.classList.remove("spinning");
 }
 
-// Auto-load on page open
-loadAll();
+load();
 </script>
 
 </body>
