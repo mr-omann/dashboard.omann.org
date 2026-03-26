@@ -1,0 +1,127 @@
+{
+  "pillar": "private",
+  "workspace": "ottomator",
+  "week": "2026-W13",
+  "collected_at": "2026-03-25T08:10:24Z",
+  "rendered_at": "2026-03-25T08:10:47.590205+00:00",
+  "notion_tasks": {
+    "open": 4,
+    "in_progress": 0,
+    "overdue": 0,
+    "blocked": 1,
+    "error": ""
+  },
+  "git_health": {
+    "total": 9,
+    "need_attention": 9,
+    "ok_idle": 0,
+    "by_flag": {
+      "CRITICAL": 9,
+      "GIT-STALE": 0,
+      "OV-SILENT": 0,
+      "IDLE": 0,
+      "OK": 0
+    }
+  },
+  "projects": [
+    {
+      "name": "DSQ_metronome",
+      "flag": "CRITICAL",
+      "days_since_commit": 62,
+      "last_commit_ago": "9 weeks ago",
+      "last_commit_msg": "Initial commit",
+      "dirty_files": 46,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "kairos",
+      "flag": "CRITICAL",
+      "days_since_commit": 9999,
+      "last_commit_ago": "never",
+      "last_commit_msg": "",
+      "dirty_files": 11,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "mac_setup",
+      "flag": "CRITICAL",
+      "days_since_commit": 9,
+      "last_commit_ago": "9 days ago",
+      "last_commit_msg": "commit",
+      "dirty_files": 11,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "mark",
+      "flag": "CRITICAL",
+      "days_since_commit": 20,
+      "last_commit_ago": "3 weeks ago",
+      "last_commit_msg": "Initial commit",
+      "dirty_files": 17,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "nightfall",
+      "flag": "CRITICAL",
+      "days_since_commit": 27,
+      "last_commit_ago": "4 weeks ago",
+      "last_commit_msg": "v1.3.7 \u2014 Google Sheets optimization",
+      "dirty_files": 5,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "omann.org",
+      "flag": "CRITICAL",
+      "days_since_commit": 19,
+      "last_commit_ago": "3 weeks ago",
+      "last_commit_msg": "style: force dark mode on nightfall sub-page and preserve light mode designs",
+      "dirty_files": 12,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "ottoscope-hw",
+      "flag": "CRITICAL",
+      "days_since_commit": 13,
+      "last_commit_ago": "2 weeks ago",
+      "last_commit_msg": "Implement local density depth for demo (Tasks 1-6)",
+      "dirty_files": 120,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "sitrep",
+      "flag": "CRITICAL",
+      "days_since_commit": 9999,
+      "last_commit_ago": "never",
+      "last_commit_msg": "",
+      "dirty_files": 0,
+      "ov_memory_count": 0,
+      "has_git": false,
+      "trend": ""
+    },
+    {
+      "name": "symphony-prototype",
+      "flag": "CRITICAL",
+      "days_since_commit": 10,
+      "last_commit_ago": "10 days ago",
+      "last_commit_msg": "feat: install agency-agents globally",
+      "dirty_files": 34,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    }
+  ]
+}

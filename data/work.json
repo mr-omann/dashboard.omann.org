@@ -1,0 +1,193 @@
+{
+  "pillar": "work",
+  "workspace": "melabot",
+  "week": "2026-W13",
+  "collected_at": "2026-03-24T21:04:19Z",
+  "rendered_at": "2026-03-24T21:04:53.792101+00:00",
+  "notion_tasks": {
+    "open": 86,
+    "in_progress": 13,
+    "overdue": 3,
+    "blocked": 0,
+    "error": ""
+  },
+  "git_health": {
+    "total": 15,
+    "need_attention": 1,
+    "ok_idle": 14,
+    "by_flag": {
+      "CRITICAL": 1,
+      "GIT-STALE": 0,
+      "OV-SILENT": 0,
+      "IDLE": 0,
+      "OK": 14
+    }
+  },
+  "projects": [
+    {
+      "name": "dlsc",
+      "flag": "CRITICAL",
+      "days_since_commit": 9999,
+      "last_commit_ago": "never",
+      "last_commit_msg": "",
+      "dirty_files": 0,
+      "ov_memory_count": 0,
+      "has_git": false,
+      "trend": ""
+    },
+    {
+      "name": "MelaPlot",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add gitignore for data files and analysis folders, commit main.py and README",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "clappia_to_odoo",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add data file gitignore rules, commit migration scripts and docs",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "data_analysis_melatech",
+      "flag": "OK",
+      "days_since_commit": 0,
+      "last_commit_ago": "8 hours ago",
+      "last_commit_msg": "chore: remove obsolete VM deployment scripts and improve .gitignore",
+      "dirty_files": 0,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "docs.melatech.io",
+      "flag": "OK",
+      "days_since_commit": 0,
+      "last_commit_ago": "11 hours ago",
+      "last_commit_msg": "Remove Epic scanner article from DA and DE locales",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "e-conomic_attachment_matcher",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add gitignore for PDFs and data files, commit matcher scripts",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "hub-sitrep",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "Initial commit: hub-sitrep weekly SitRep system with collect.sh, dashboard renderer, and LaunchAgent",
+      "dirty_files": 3,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "invoice_sorter",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add gitignore, commit Flask app and PDF sorting scripts",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "lens-a-lot",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add gitignore, commit in-progress Swift source changes and README",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "melatech.io",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "harden canonical domain, add HSTS, and add SSL health check script",
+      "dirty_files": 2,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "mosyle_odoo",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add gitignore and README",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "nordea_scraper",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "WIP: add gitignore and README",
+      "dirty_files": 1,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "odoo-mcp",
+      "flag": "OK",
+      "days_since_commit": 6,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "Initial commit: odoo-mcp scripts and documentation (data exports excluded)",
+      "dirty_files": 10,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "odoo-to-econ-sync",
+      "flag": "OK",
+      "days_since_commit": 5,
+      "last_commit_ago": "5 days ago",
+      "last_commit_msg": "chore: add .opencode engineer agent for project-scoped sessions",
+      "dirty_files": 20,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "qms",
+      "flag": "OK",
+      "days_since_commit": 5,
+      "last_commit_ago": "6 days ago",
+      "last_commit_msg": "docs(controlled): SOP-MS-001 Complaint Handling \u2014 approved via Odoo ID 3",
+      "dirty_files": 4,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    }
+  ]
+}
