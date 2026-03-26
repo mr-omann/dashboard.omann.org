@@ -2,8 +2,8 @@
   "pillar": "private",
   "workspace": "ottomator",
   "week": "2026-W13",
-  "collected_at": "2026-03-25T08:10:24Z",
-  "rendered_at": "2026-03-25T08:10:47.590205+00:00",
+  "collected_at": "2026-03-26T07:50:20Z",
+  "rendered_at": "2026-03-26T07:50:22.837658+00:00",
   "notion_tasks": {
     "open": 4,
     "in_progress": 0,
@@ -27,7 +27,7 @@
     {
       "name": "DSQ_metronome",
       "flag": "CRITICAL",
-      "days_since_commit": 62,
+      "days_since_commit": 63,
       "last_commit_ago": "9 weeks ago",
       "last_commit_msg": "Initial commit",
       "dirty_files": 46,
@@ -49,8 +49,8 @@
     {
       "name": "mac_setup",
       "flag": "CRITICAL",
-      "days_since_commit": 9,
-      "last_commit_ago": "9 days ago",
+      "days_since_commit": 10,
+      "last_commit_ago": "10 days ago",
       "last_commit_msg": "commit",
       "dirty_files": 11,
       "ov_memory_count": 0,
@@ -60,7 +60,7 @@
     {
       "name": "mark",
       "flag": "CRITICAL",
-      "days_since_commit": 20,
+      "days_since_commit": 21,
       "last_commit_ago": "3 weeks ago",
       "last_commit_msg": "Initial commit",
       "dirty_files": 17,
@@ -71,7 +71,7 @@
     {
       "name": "nightfall",
       "flag": "CRITICAL",
-      "days_since_commit": 27,
+      "days_since_commit": 28,
       "last_commit_ago": "4 weeks ago",
       "last_commit_msg": "v1.3.7 \u2014 Google Sheets optimization",
       "dirty_files": 5,
@@ -82,10 +82,10 @@
     {
       "name": "omann.org",
       "flag": "CRITICAL",
-      "days_since_commit": 19,
+      "days_since_commit": 20,
       "last_commit_ago": "3 weeks ago",
       "last_commit_msg": "style: force dark mode on nightfall sub-page and preserve light mode designs",
-      "dirty_files": 12,
+      "dirty_files": 13,
       "ov_memory_count": 0,
       "has_git": true,
       "trend": ""
@@ -93,7 +93,7 @@
     {
       "name": "ottoscope-hw",
       "flag": "CRITICAL",
-      "days_since_commit": 13,
+      "days_since_commit": 14,
       "last_commit_ago": "2 weeks ago",
       "last_commit_msg": "Implement local density depth for demo (Tasks 1-6)",
       "dirty_files": 120,
@@ -115,8 +115,8 @@
     {
       "name": "symphony-prototype",
       "flag": "CRITICAL",
-      "days_since_commit": 10,
-      "last_commit_ago": "10 days ago",
+      "days_since_commit": 11,
+      "last_commit_ago": "11 days ago",
       "last_commit_msg": "feat: install agency-agents globally",
       "dirty_files": 34,
       "ov_memory_count": 0,
