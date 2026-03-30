@@ -1,38 +1,49 @@
 {
   "pillar": "private",
   "workspace": "ottomator",
-  "week": "2026-W13",
-  "collected_at": "2026-03-26T07:50:20Z",
-  "rendered_at": "2026-03-26T07:50:22.837658+00:00",
+  "week": "2026-W14",
+  "collected_at": "2026-03-30T07:18:05Z",
+  "rendered_at": "2026-03-30T07:28:38.194319+00:00",
   "notion_tasks": {
-    "open": 4,
+    "open": 11,
     "in_progress": 0,
     "overdue": 0,
-    "blocked": 1,
+    "blocked": 0,
     "error": ""
   },
   "git_health": {
-    "total": 9,
-    "need_attention": 9,
-    "ok_idle": 0,
+    "total": 11,
+    "need_attention": 10,
+    "ok_idle": 1,
     "by_flag": {
-      "CRITICAL": 9,
+      "CRITICAL": 10,
       "GIT-STALE": 0,
       "OV-SILENT": 0,
       "IDLE": 0,
-      "OK": 0
+      "OK": 1
     }
   },
   "projects": [
     {
       "name": "DSQ_metronome",
       "flag": "CRITICAL",
-      "days_since_commit": 63,
-      "last_commit_ago": "9 weeks ago",
+      "days_since_commit": 67,
+      "last_commit_ago": "10 weeks ago",
       "last_commit_msg": "Initial commit",
       "dirty_files": 46,
       "ov_memory_count": 0,
       "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "email-intake",
+      "flag": "CRITICAL",
+      "days_since_commit": 9999,
+      "last_commit_ago": "never",
+      "last_commit_msg": "",
+      "dirty_files": 0,
+      "ov_memory_count": 0,
+      "has_git": false,
       "trend": ""
     },
     {
@@ -49,8 +60,8 @@
     {
       "name": "mac_setup",
       "flag": "CRITICAL",
-      "days_since_commit": 10,
-      "last_commit_ago": "10 days ago",
+      "days_since_commit": 14,
+      "last_commit_ago": "2 weeks ago",
       "last_commit_msg": "commit",
       "dirty_files": 11,
       "ov_memory_count": 0,
@@ -60,8 +71,8 @@
     {
       "name": "mark",
       "flag": "CRITICAL",
-      "days_since_commit": 21,
-      "last_commit_ago": "3 weeks ago",
+      "days_since_commit": 24,
+      "last_commit_ago": "4 weeks ago",
       "last_commit_msg": "Initial commit",
       "dirty_files": 17,
       "ov_memory_count": 0,
@@ -69,21 +80,21 @@
       "trend": ""
     },
     {
-      "name": "nightfall",
+      "name": "nvg",
       "flag": "CRITICAL",
-      "days_since_commit": 28,
-      "last_commit_ago": "4 weeks ago",
-      "last_commit_msg": "v1.3.7 \u2014 Google Sheets optimization",
-      "dirty_files": 5,
+      "days_since_commit": 9999,
+      "last_commit_ago": "never",
+      "last_commit_msg": "",
+      "dirty_files": 0,
       "ov_memory_count": 0,
-      "has_git": true,
+      "has_git": false,
       "trend": ""
     },
     {
       "name": "omann.org",
       "flag": "CRITICAL",
-      "days_since_commit": 20,
-      "last_commit_ago": "3 weeks ago",
+      "days_since_commit": 24,
+      "last_commit_ago": "4 weeks ago",
       "last_commit_msg": "style: force dark mode on nightfall sub-page and preserve light mode designs",
       "dirty_files": 13,
       "ov_memory_count": 0,
@@ -93,8 +104,8 @@
     {
       "name": "ottoscope-hw",
       "flag": "CRITICAL",
-      "days_since_commit": 14,
-      "last_commit_ago": "2 weeks ago",
+      "days_since_commit": 18,
+      "last_commit_ago": "3 weeks ago",
       "last_commit_msg": "Implement local density depth for demo (Tasks 1-6)",
       "dirty_files": 120,
       "ov_memory_count": 0,
@@ -115,10 +126,21 @@
     {
       "name": "symphony-prototype",
       "flag": "CRITICAL",
-      "days_since_commit": 11,
-      "last_commit_ago": "11 days ago",
+      "days_since_commit": 14,
+      "last_commit_ago": "2 weeks ago",
       "last_commit_msg": "feat: install agency-agents globally",
       "dirty_files": 34,
+      "ov_memory_count": 0,
+      "has_git": true,
+      "trend": ""
+    },
+    {
+      "name": "velvet",
+      "flag": "OK",
+      "days_since_commit": 1,
+      "last_commit_ago": "24 hours ago",
+      "last_commit_msg": "Update icons: black on trans for toolbar, rounded corners for extension icons",
+      "dirty_files": 0,
       "ov_memory_count": 0,
       "has_git": true,
       "trend": ""
